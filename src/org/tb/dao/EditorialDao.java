@@ -1,4 +1,4 @@
-package org.tb.dao.impl;
+package org.tb.dao;
 
 import java.util.List;
 import org.tb.model.Editorial;
