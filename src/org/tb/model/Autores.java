@@ -4,7 +4,7 @@ package org.tb.model;
 public class Autores {
     /**
 create table autores(
-	id_autor int primary key auto_increment,
+    id_autor int primary key auto_increment,
     nombre_autor varchar(100) not null,
     apellido_autor varchar(100) not null,
     nacionalidad varchar(100),
@@ -45,7 +45,10 @@ create table autores(
     }
 
     public void setNombre_autor(String nombre_autor) {
-        this.nombre_autor = nombre_autor;
+        //formatear a Mayusculas
+        String nombreMayusculas = nombre_autor.toUpperCase();
+        //formatear a Inicia con Mayusculas
+        this.nombre_autor = nombreMayusculas;  
     }
 
     public String getApellido_autor() {
