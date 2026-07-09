@@ -3,7 +3,7 @@ package org.tb.dao.impl;
 import java.util.List;
 import org.tb.model.Editorial;
  
-public interface EditorialDAO {
+public interface EditorialDao {
     //firmas de metodos
     boolean insertar(Editorial editoriales);
     List<Editorial> listar();
