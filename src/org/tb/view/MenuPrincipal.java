@@ -1,5 +1,6 @@
 package org.tb.view;
 import java.util.Scanner;
+import org.tb.controller.EditorialController;
 
 public class MenuPrincipal {
 
@@ -7,7 +8,11 @@ public class MenuPrincipal {
     public void iniciar(){
         int opcion = 0;
         do {
-            System.out.println("Bienvenido, selecciones una opcion!");
+            System.out.println(" --------------------------------------");
+            System.out.println("                                                ");
+            System.out.println("1.    SISTEMA DE LIBRERIA    ");
+            System.out.println("                                                ");
+            System.out.println(" --------------------------------------");
             System.out.println("1. Modulo Cliente");
             System.out.println("2. Modulo Autores");
             System.out.println("3. Modulo Categorias");
@@ -16,7 +21,7 @@ public class MenuPrincipal {
             opcion = Integer.parseInt(leer.nextLine());
             switch (opcion) {
                 case 1:
-                    System.out.println("Cliente");
+                    
                     break;
                 case 2:
                     System.out.println("Autor");
@@ -29,6 +34,9 @@ public class MenuPrincipal {
                     break;   
                 case 5:
                     System.out.println("Editoriales");
+                    EditorialConsoleView vista = new EditorialConsoleView();
+                    EditorialController control = new EditorialController(vista);
+                    control.iniciar();
                     break;
                 default:
                     System.out.println("NO existe esta opción");
