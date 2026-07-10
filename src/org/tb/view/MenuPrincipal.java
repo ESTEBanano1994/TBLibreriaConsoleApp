@@ -2,7 +2,7 @@ package org.tb.view;
 import java.util.List;
 import java.util.Scanner;
 import org.tb.model.Editorial;
-public class EditorialConsoleView {
+public class MenuPrincipal {
     private final Scanner leer = new Scanner(System.in);
     // Mostrar menú
  
