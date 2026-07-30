@@ -5,7 +5,7 @@ import org.tb.view.MenuPrincipal;
 
 /**
  *
- * @author informatica
+ * @author aruba
  */
 public class Main {
 
@@ -14,6 +14,5 @@ public class Main {
         MenuPrincipal menu = new MenuPrincipal();
         menu.iniciar();
     }
-    
     
 }

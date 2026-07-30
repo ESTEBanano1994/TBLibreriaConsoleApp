@@ -2,8 +2,8 @@ package org.tb.view;
 import java.util.Scanner;
 
 public class MenuPrincipal {
-
-   Scanner leer = new Scanner(System.in);
+    Scanner leer = new Scanner(System.in);
+    
     public void iniciar(){
         int opcion = 0;
         do {
@@ -14,6 +14,7 @@ public class MenuPrincipal {
             System.out.println("5. Modulo Editoriales");
             System.out.println("4. Salir");
             opcion = Integer.parseInt(leer.nextLine());
+            
             switch (opcion) {
                 case 1:
                     System.out.println("Cliente");
@@ -33,6 +34,7 @@ public class MenuPrincipal {
                 default:
                     System.out.println("NO existe esta opción");
             }
+            
         } while (opcion != 4);
     }
 }
