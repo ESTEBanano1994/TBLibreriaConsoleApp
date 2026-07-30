@@ -1,5 +1,7 @@
 package org.tb.view;
 import java.util.Scanner;
+import org.tb.view.CategoriaConsoleView;
+import org.tb.controller.CategoriaController;
 
 public class MenuPrincipal {
 
@@ -23,6 +25,9 @@ public class MenuPrincipal {
                     break;
                 case 3:
                     System.out.println("Categoria");
+                    CategoriaConsoleView vista = new CategoriaConsoleView();
+                    CategoriaController control = new CategoriaController(vista);
+                    control.iniciar();
                     break;
                 case 4:
                     System.out.println("Adiós Vaquero!");
