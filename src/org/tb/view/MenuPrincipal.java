@@ -1,77 +1,64 @@
 package org.tb.view;
-import java.util.List;
+
 import java.util.Scanner;
-import org.tb.model.Editorial;
+import org.tb.controller.EditorialController;
+ 
 public class MenuPrincipal {
     private final Scanner leer = new Scanner(System.in);
-    // Mostrar menú
- 
-    public int mostrarMenu() {
- 
+    //heramienta scanner: lee datos del usuario
+    public void iniciarSistema(){
         int opcion;
-        System.out.println("------- GESTION DE EDITORIALES -------");
-        System.out.println("1. CREAR NUEVA EDITORIAL");
-        System.out.println("2. LISTAR EDITORIALES");
-        System.out.println("3. BUSCAR EDITORIAL POR NIT");
-        System.out.println("4. MODIFICAR EDITORIAL");
-        System.out.println("5. ELIMINAR EDITORIAL");
-        System.out.println("6. REGRESAR AL MENU PRINCIPAL");
-        System.out.print("Seleccione una opción: ");
-        opcion = Integer.parseInt(leer.nextLine());
-        return opcion;
- 
+        //ciclo para el menu: do while
+        do {            
+            System.out.println("--------------------------------------");
+            System.out.println("    SISTEMA CENTRAL LIBRERIA - IN4CM");
+            System.out.println("--------------------------------------");
+            System.out.println("1. Entrar a CLIENTES");
+            System.out.println("2. Entrada a CATEGORIAS");
+            System.out.println("3. Entrada a LIBROS");
+            System.out.println("4. Entrada a EDITORIALES");
+            System.out.println("5. Entrada a COMPRAS");
+            System.out.println("6. Entrada a AUTORES");
+            System.out.println("7. Entrada a DETALLE AUTORES");
+            System.out.println("8. SALIR DEL SISTEMA");
+            System.out.println("Selecciones una opción: ");
+            opcion = Integer.parseInt(leer.nextLine());
+        //swich / case
+            switch (opcion) {
+                case 1:
+                    //instanciar la vista CLIENTES
+                case 2:
+                    //instanciar la vista EDITORIALES
+                    System.out.println("CATEGORIAS");
+                    break;
+                case 3:
+                    //instanciar la vista LIBROS
+                    System.out.println("LIBROS");
+                    break;
+                case 4:
+                    EditorialConsoleView vista = new EditorialConsoleView();
+                    EditorialController  control = new EditorialController(vista);
+                    control.iniciar();
+                    break;
+                case 5:
+                    //instanciar la vista LIBROS
+                    System.out.println("COMPRAS");
+                    break;
+                 case 6:
+                    //instanciar la vista LIBROS
+                    System.out.println("AUTORES");
+                    break;
+                case 7:
+                    //instanciar la vista LIBROS
+                    System.out.println("DETALLE AUTORES");
+                    break;
+                case 8:
+                    //instanciar la vista LIBROS
+                    System.out.println("\n Hasta luego sixseveniano...");
+                    break;
+                default:
+                    System.out.println("no existe esta opción");
+            }
+        } while (opcion != 8);
     }
-    public String solicitarNit() {
-        System.out.print("Ingrese el NIT: ");
-        return leer.nextLine();
- 
-    }
-    public String solicitarNombreEditorial() {
-        System.out.print("Ingrese el nombre de la editorial: ");
-        return leer.nextLine();
- 
-    }
-    public String solicitarTelefonoEditorial() {
-        System.out.print("Ingrese el teléfono: ");
-        return leer.nextLine();
- 
-    }
-    public String solicitarDireccionEditorial() {
-        System.out.print("Ingrese la dirección: ");
-        return leer.nextLine();
- 
-    }
-    // Mostrar una editorial
- 
-    public void mostrarEditorial(Editorial edi) {
- 
-        System.out.println("----- DATOS DE LA EDITORIAL -----");
-        System.out.println("NIT: " + edi.getNit());
-        System.out.println("NOMBRE: " + edi.getNombre_editorial());
-        System.out.println("TELÉFONO: " + edi.getTelefono_editorial());
-        System.out.println("DIRECCIÓN: " + edi.getDireccion_editoria());
- 
-    }
-    // Mostrar lista de editoriales
- 
-    public void mostrarListaEditoriales(List<Editorial> editoriales) {
-        System.out.println("----------- LISTA DE EDITORIALES -----------");
-        System.out.printf("%-15s %-25s %-20s %-25s%n",
-                "NIT", "NOMBRE", "TELÉFONO", "DIRECCIÓN");
-        for (Editorial edi : editoriales) {
-            System.out.printf("%-15s %-25s %-20s %-25s%n",
-                    edi.getNit(),
-                    edi.getNombre_editorial(),
-                    edi.getTelefono_editorial(),
-                    edi.getDireccion_editoria());
- 
-        }
- 
-    }
-    public void mostrarMensaje(String mensaje) {
- 
-        System.out.println(mensaje);
- 
-    }
- 
 }

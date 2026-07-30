@@ -15,11 +15,13 @@ public class EditorialController {
         do {
             opcion = vista.mostrarMenu();
             if (opcion == 2) {
-                listar();
+                listarTodos();
+                
             }
+            break;
         } while (opcion != 6);
     }
-    private void listar() {
+    private void listarTodos() {
         vista.mostrarListaEditoriales(dao.listarTodos());
     }
 }
