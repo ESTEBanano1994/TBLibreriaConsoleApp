@@ -2,30 +2,34 @@ package org.tb.model;
 
 public class Categoria {
 
-    private int idCategoria;
+    private String ID;
     private String nombreCategoria;
 
     public Categoria() {
     }
-
-    public Categoria(int idCategoria, String nombreCategoria) {
-        this.idCategoria = idCategoria;
+    
+    public Categoria(String ID, String nombreCategoria) {
+        this.ID = ID;
         this.nombreCategoria = nombreCategoria;
     }
+    
+        //getter and setters
 
-    public int getIdCategoria() {
-        return idCategoria;
+    public String getID() {
+        return ID;
     }
 
-    public void setIdCategoria(int idCategoria) {
-        this.idCategoria = idCategoria;
+    public void setID(String ID) {
+        this.ID = ID;
     }
 
     public String getNombreCategoria() {
         return nombreCategoria;
     }
 
-    public void setNombreCategoria(String nombreCategoria) {
-        this.nombreCategoria = nombreCategoria;
+    public void setNombreCategoria(String nombre_categoria) {
+        String nombreMayusculas = nombre_categoria.toUpperCase();
+        this.nombreCategoria = nombre_categoria;
     }
+
 }

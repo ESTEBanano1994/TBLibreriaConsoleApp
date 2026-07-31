@@ -2,17 +2,12 @@ package org.tb.dao;
 
 import java.util.List;
 import org.tb.model.Categoria;
-
+ 
 public interface CategoriaDAO {
-
-    boolean crear(Categoria categoria);
-
+    //firmas de metodos
+    boolean insertar(Categoria categorias);
     List<Categoria> listarTodos();
-
-    Categoria buscarPorId(int idCategoria);
-
+    Categoria buscar(String ID);
     boolean actualizar(Categoria categoria);
-
-    boolean eliminar(int idCategoria);
-
+    boolean eliminar(String ID);
 }
