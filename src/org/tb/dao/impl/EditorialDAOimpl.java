@@ -20,9 +20,9 @@ public List<Editorial> listarTodos() {
         while (rs.next()) {
             Editorial edi = new Editorial();
             edi.setNit(rs.getString("nit"));
-            edi.setNombre_editorial(rs.getString("nombre_editorial"));
-            edi.setTelefono_editorial(rs.getString("telefono_editorial"));
-            edi.setDireccion_editoria(rs.getString("direccion_editoria"));
+            edi.setNombreEditorial(rs.getString("nombre_editorial"));
+            edi.setTelefonoEditorial(rs.getString("telefono_editorial"));
+            edi.setDireccionEditorial(rs.getString("direccion_editoria"));
             editoriales.add(edi);
         }
     } catch (Exception e) {
@@ -55,15 +55,10 @@ public Editorial buscar(String nit) {
         ResultSet rs = cs.executeQuery();
  
         if (rs.next()) {
- 
             edi.setNit(rs.getString("nit"));
-
-            edi.setNombre_editorial(rs.getString("nombre_editorial"));
-
-            edi.setTelefono_editorial(rs.getString("telefono_editorial"));
-
-            edi.setDireccion_editoria(rs.getString("direccion_editoria"));
- 
+            edi.setNombreEditorial(rs.getString("nombre_editorial"));
+            edi.setTelefonoEditorial(rs.getString("telefono_editorial"));
+            edi.setDireccionEditorial(rs.getString("direccion_editorial"));
             return edi;
 
         } else {

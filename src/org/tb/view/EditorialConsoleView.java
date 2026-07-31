@@ -75,11 +75,11 @@ public class EditorialConsoleView {
 
         System.out.println("NIT: " + edi.getNit());
 
-        System.out.println("NOMBRE: " + edi.getNombre_editorial());
+        System.out.println("NOMBRE: " + edi.getNombreEditorial());
 
-        System.out.println("TELÉFONO: " + edi.getTelefono_editorial());
+        System.out.println("TELÉFONO: " + edi.getTelefonoEditorial());
 
-        System.out.println("DIRECCIÓN: " + edi.getDireccion_editoria());
+        System.out.println("DIRECCIÓN: " + edi.getDireccionEditorial());
 
     }
  
@@ -99,11 +99,11 @@ public class EditorialConsoleView {
 
                     edi.getNit(),
 
-                    edi.getNombre_editorial(),
+                    edi.getNombreEditorial(),
 
-                    edi.getTelefono_editorial(),
+                    edi.getTelefonoEditorial(),
 
-                    edi.getDireccion_editoria());
+                    edi.getDireccionEditorial());
 
         }
 
