@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tb.controller.MenuPrincipalController">
+    <top>
+        <Label style="-fx-font-size: 24; -fx-font-weight: bold;" text="TB Librería - Menú Principal" BorderPane.alignment="CENTER">
+            <padding><Insets top="20" /></padding>
+        </Label>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="15" style="-fx-background-color: black;">
+            <padding><Insets bottom="30" left="40" right="40" top="30" /></padding>
+            <Button onAction="#handleClientes" prefHeight="40" prefWidth="220" style="-fx-background-color: white;" text="Clientes" textFill="#831515" />
+            <Button onAction="#handleNoDisponible" prefHeight="40" prefWidth="220" style="-fx-background-color: white;" text="Autores" textFill="#791313" />
+            <Button onAction="#handleNoDisponible" prefHeight="40" prefWidth="220" style="-fx-background-color: white;" text="Categorías" textFill="#8d1919" />
+            <Button onAction="#handleNoDisponible" prefHeight="40" prefWidth="220" style="-fx-background-color: white;" text="Editoriales" textFill="#9e1818" />
+            <Button onAction="#handleSalir" prefHeight="40" prefWidth="220" style="-fx-background-color: white;" text="Salir" textFill="#941f1f" />
+        </VBox>
+    </center>
+</BorderPane>

@@ -11,7 +11,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class ClienteDAOimpl implements ClienteDAO {
+public class ClienteDAOImpl implements ClienteDAO {
 
     @Override
     public List<Cliente> listarTodos() {
