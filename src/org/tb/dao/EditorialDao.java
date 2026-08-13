@@ -1,0 +1,13 @@
+package org.tb.dao;
+
+import java.util.List;
+import org.tb.model.Editorial;
+ 
+public interface EditorialDao {
+    //firmas de metodos
+    boolean insertar(Editorial editoriales);
+    List<Editorial> listarTodos();
+    Editorial buscar(String cui);
+    boolean actualizar(Editorial cliente);
+    boolean eliminar(String cui);
+}

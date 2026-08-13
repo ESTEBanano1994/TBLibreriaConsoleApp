@@ -3,6 +3,9 @@ import java.util.Scanner;
 import org.tb.view.CategoriaConsoleView;
 import org.tb.controller.CategoriaController;
 
+import java.util.Scanner;
+import org.tb.controller.EditorialController;
+ 
 public class MenuPrincipal {
     Scanner leer = new Scanner(System.in);
     
@@ -19,10 +22,10 @@ public class MenuPrincipal {
             
             switch (opcion) {
                 case 1:
-                    System.out.println("Cliente");
-                    break;
+                    //instanciar la vista CLIENTES
                 case 2:
-                    System.out.println("Autor");
+                    //instanciar la vista EDITORIALES
+                    System.out.println("CATEGORIAS");
                     break;
                 case 3:
                     System.out.println("Categoria");
@@ -31,13 +34,28 @@ public class MenuPrincipal {
                     control.iniciar();
                     break;
                 case 4:
-                    System.out.println("Adiós Vaquero!");
-                    break;   
+                    EditorialConsoleView vista = new EditorialConsoleView();
+                    EditorialController  control = new EditorialController(vista);
+                    control.iniciar();
+                    break;
                 case 5:
-                    System.out.println("Editoriales");
+                    //instanciar la vista LIBROS
+                    System.out.println("COMPRAS");
+                    break;
+                 case 6:
+                    //instanciar la vista LIBROS
+                    System.out.println("AUTORES");
+                    break;
+                case 7:
+                    //instanciar la vista LIBROS
+                    System.out.println("DETALLE AUTORES");
+                    break;
+                case 8:
+                    //instanciar la vista LIBROS
+                    System.out.println("\n Hasta luego sixseveniano...");
                     break;
                 default:
-                    System.out.println("NO existe esta opción");
+                    System.out.println("no existe esta opción");
             }
             
         } while (opcion != 4);

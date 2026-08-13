@@ -14,10 +14,10 @@ public class Main extends Application {
     @Override
     public void start(Stage escenarioPrincipal) throws Exception {
         this.escenarioPrincipal = escenarioPrincipal;
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/tb/view/CategoriaFXView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/tb/view/EditorialFXView.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
-        escenarioPrincipal.setTitle("TB Librería");
+        escenarioPrincipal.setTitle("TB Libreria");
         escenarioPrincipal.setScene(scene);
         escenarioPrincipal.show();
     }
