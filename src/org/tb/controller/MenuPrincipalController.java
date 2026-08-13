@@ -14,6 +14,7 @@ public class MenuPrincipalController {
             Main.cambiarVista("/org/tb/view/ClienteView.fxml");
         } catch (Exception e) {
             mostrarError("Error al cargar la vista de clientes:\n" + e.getMessage());
+            e.printStackTrace();
         }
     }
 

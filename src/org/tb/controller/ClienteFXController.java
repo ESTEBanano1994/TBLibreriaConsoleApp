@@ -8,8 +8,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import org.tb.dao.ClienteDAO;
 import org.tb.dao.impl.ClienteDAOImpl;
 import org.tb.model.Cliente;
@@ -30,6 +32,12 @@ public class ClienteFXController implements Initializable {
     @FXML
     private TableView<Cliente> tablaClientes;//Tabla de entidad: cliente
 
+    //colCUI, colNombre, ColApellido, colCorreoElectronico
+    @FXML TableColumn colCUI;
+    @FXML TableColumn colNombre;
+    @FXML TableColumn colApellido;
+    @FXML TableColumn colCorreoElectronico;
+    
     private final ClienteDAO clienteDAO = new ClienteDAOImpl();
     private final ObservableList<Cliente> listaClientes = FXCollections.observableArrayList();//Entidad:Cliente
 
@@ -37,8 +45,20 @@ public class ClienteFXController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         cargarTabla();
         seleccionarFila();
+        configurarTabla();
     }
+    
+    private void configurarTabla() {
+            //CellValueFactory, PropertyValueFactory
+            //Calor de fabrica de celda, propiedad de fabrica de celda
+            colCUI.setCellValueFactory(new PropertyValueFactory<Cliente, Long>("cui"));
+            colNombre.setCellValueFactory(new PropertyValueFactory<Cliente, String>("nombre"));
+            colApellido.setCellValueFactory(new PropertyValueFactory<Cliente, String>("apellido"));
+            colCorreoElectronico.setCellValueFactory(new PropertyValueFactory<Cliente, String>("correoElectronico"));
 
+                        
+    }
+    
     private void cargarTabla() {
         listaClientes.setAll(clienteDAO.listarTodos());
         tablaClientes.setItems(listaClientes);

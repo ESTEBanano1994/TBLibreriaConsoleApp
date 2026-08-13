@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21.0.1" fx:controller="org.tb.controller.RegistrarUsuarioController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #E5D2B3;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tb.controller.RegistrarUsuarioController">
     <stylesheets>
         <URL value="@/org/tb/view/style/registrarusuarioview.css" />
     </stylesheets>
@@ -43,8 +43,8 @@
             </GridPane>
          </children>
       </StackPane>
-      <Button fx:id="btnRegresar" layoutX="22.0" layoutY="21.0" mnemonicParsing="false" onAction="#eventoRegresar" prefHeight="25.0" prefWidth="94.0" text="REGRESAR" />
-      <Button fx:id="btnRegistrar" layoutX="239.0" layoutY="347.0" mnemonicParsing="false" onAction="#eventoRegistrar" prefHeight="25.0" prefWidth="145.0" text="REGISTRAR" />
+      <Button fx:id="btnRegresar" layoutX="22.0" layoutY="21.0" mnemonicParsing="false" onAction="#eventoRegresar" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: #51201F;" text="REGRESAR" textFill="WHITE" />
+      <Button fx:id="btnRegistrar" layoutX="239.0" layoutY="347.0" mnemonicParsing="false" onAction="#eventoRegistrar" prefHeight="25.0" prefWidth="145.0" style="-fx-background-color: #51201F;" text="REGISTRAR" textFill="WHITE" />
       <Label layoutX="155.0" layoutY="46.0" text="REGISTRAR NUEVO USUARIO">
          <font>
             <Font size="24.0" />

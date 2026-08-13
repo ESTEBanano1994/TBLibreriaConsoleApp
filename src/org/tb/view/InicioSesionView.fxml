@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="426.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tb.controller.InicioSesionController">
+<AnchorPane id="AnchorPane" prefHeight="426.0" prefWidth="600.0" style="-fx-background-color: #E5D2B3;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tb.controller.InicioSesionController">
     <stylesheets>
         <URL value="@/org/tb/view/style/iniciosesionview.css" />
     </stylesheets>
@@ -46,8 +46,8 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Button fx:id="btnIniciarSesion" layoutX="137.0" layoutY="334.0" mnemonicParsing="false" onAction="#eventoInicioSesion" prefHeight="30.0" prefWidth="204.0" text="INICIAR" />
-      <Label fx:id="lblMensaje" layoutX="271.0" layoutY="309.0" text="Mensaje" textFill="#f83737" />
-      <Button fx:id="btnRegistro" layoutX="355.0" layoutY="334.0" mnemonicParsing="false" onAction="#eventoRegistrarse" prefHeight="30.0" prefWidth="108.0" text="REGISTRARSE" />
+      <Button fx:id="btnIniciarSesion" layoutX="137.0" layoutY="334.0" mnemonicParsing="false" onAction="#eventoInicioSesion" prefHeight="30.0" prefWidth="204.0" style="-fx-background-color: #51201F;" text="INICIAR" textFill="WHITE" />
+      <Label fx:id="lblMensaje" layoutX="271.0" layoutY="309.0" text="Mensaje" textFill="#791e1e" />
+      <Button fx:id="btnRegistro" layoutX="355.0" layoutY="334.0" mnemonicParsing="false" onAction="#eventoRegistrarse" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: #51201F;" text="REGISTRARSE" textFill="WHITE" />
    </children>
 </AnchorPane>
