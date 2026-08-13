@@ -19,7 +19,7 @@ public List<Categoria> listarTodos() {
     ) {
         while (rs.next()) {
             Categoria categ = new Categoria();
-            categ.setID(rs.getString("ID"));
+            categ.setID(rs.getString("id_categoria"));
             categ.setNombreCategoria(rs.getString("nombre_categoria"));
            
             categorias.add(categ);

@@ -18,8 +18,8 @@
 <VBox maxWidth="300" minWidth="300" spacing="10" style="-fx-background-color: #EFE1C7;">
 <padding><Insets right="20" /></padding>
 <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Registrar Categoria" />
-<TextField fx:id="txtCui" promptText="ID" />
-<TextField fx:id="txtNombre" promptText="NombreCategoria" />
+<TextField fx:id="txtID" promptText="ID" />
+<TextField fx:id="txtNombreCategoria" promptText="NombreCategoria" />
 <HBox spacing="10">
 <Button onAction="#handleGuardar" prefWidth="120" style="-fx-background-color: #51201F; -fx-border-color: #C3A885; -fx-cursor: red;" text="Guardar" textFill="WHITE" />
 <Button onAction="#handleLimpiar" prefWidth="120" style="-fx-background-color: #51201F; -fx-border-color: #C3A885;" text="Limpiar" textFill="WHITE" />
@@ -31,18 +31,10 @@
     <center>
 <VBox prefHeight="369.0" prefWidth="396.0" spacing="10">
 <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Lista de Categorias" />
-<TableView fx:id="tablaClientes" prefHeight="251.0" prefWidth="439.0" style="-fx-background-color: #E5D2B3;">
+<TableView fx:id="tablaCategorias" prefHeight="251.0" prefWidth="439.0" style="-fx-background-color: #E5D2B3;">
 <columns>
-<TableColumn fx:id="colID" prefWidth="165.0" style="-fx-background-color: white; Font: red;" text="ID">
-<cellValueFactory>
-<PropertyValueFactory property="cui" />
-</cellValueFactory>
-</TableColumn>
-<TableColumn fx:id="colNombreCategoria" prefWidth="404.0" style="-fx-background-color: white;" text="NombreCategoria">
-<cellValueFactory>
-<PropertyValueFactory property="nombre" />
-</cellValueFactory>
-</TableColumn>
+<TableColumn fx:id="colID" prefWidth="165.0" style="-fx-background-color: white; Font: red;" text="ID"/>
+<TableColumn fx:id="colNombreCategoria" prefWidth="404.0" style="-fx-background-color: white;" text="NombreCategoria"/>
 </columns>
 </TableView>
 <HBox spacing="10">

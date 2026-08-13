@@ -8,6 +8,7 @@ public class Categoria {
     public Categoria() {
     }
     
+    
     public Categoria(String ID, String nombreCategoria) {
         this.ID = ID;
         this.nombreCategoria = nombreCategoria;

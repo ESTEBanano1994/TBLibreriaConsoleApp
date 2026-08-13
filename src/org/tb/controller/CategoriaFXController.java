@@ -37,14 +37,15 @@ public class CategoriaFXController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         
+        configurarTabla();
         cargarTabla();
         seleccionarFila();
-        configurarTabla();
+        
     }
     
     private void configurarTabla(){
-        colID.setCellValueFactory(new PropertyValueFactory<>("ID"));
-        colNombreCategoria.setCellValueFactory(new PropertyValueFactory<>("NombreCategoria"));
+        colID.setCellValueFactory(new PropertyValueFactory<Categoria, String>("ID"));
+        colNombreCategoria.setCellValueFactory(new PropertyValueFactory<Categoria, String>("NombreCategoria"));
     
     }
     private void cargarTabla() {
@@ -75,11 +76,11 @@ public class CategoriaFXController implements Initializable {
             categoria.setID(txtID.getText().trim());
             categoria.setNombreCategoria(txtNombreCategoria.getText().trim());
             if (categoriaDAO.insertar(categoria)) {
-                lblMensaje.setText("Cliente registrado exitosamente.");
+                lblMensaje.setText("Categoria registrada exitosamente.");
                 cargarTabla();
                 limpiarFormulario();
             } else {
-                mostrarError("No se pudo registrar el cliente.");
+                mostrarError("No se pudo registrar la categoria.");
             }
         } catch (NumberFormatException e) {
             mostrarError("El ID debe ser un número válido.");

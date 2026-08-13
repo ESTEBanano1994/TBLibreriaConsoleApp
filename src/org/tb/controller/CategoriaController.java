@@ -23,6 +23,6 @@ public class CategoriaController {
         } while (opcion != 6);
     }
     private void listarTodos() {
-        vista.mostrarCategoria((Categoria) dao.listarTodos());
+        vista.mostrarListaCategoria(dao.listarTodos());
     }
 }
