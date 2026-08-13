@@ -1,21 +1,35 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package org.tb.system;
 
-/**
- *
- * @author informatica
- */
-public class Main {
+import javafx.application.Application;
+import static javafx.application.Application.launch;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+public class Main extends Application {
+
+    private static Stage escenarioPrincipal;
+
+    @Override
+    public void start(Stage escenarioPrincipal) throws Exception {
+        this.escenarioPrincipal = escenarioPrincipal;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/tb/view/CategoriaFXView.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        escenarioPrincipal.setTitle("TB Librería");
+        escenarioPrincipal.setScene(scene);
+        escenarioPrincipal.show();
     }
-    
-    
+
+    public static void cambiarVista(String fxmlPath) throws Exception {
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource(fxmlPath));
+        Parent root = loader.load();
+        escenarioPrincipal.setScene(new Scene(root));
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
 }
