@@ -28,16 +28,19 @@ public class MenuPrincipal {
                     System.out.println("CATEGORIAS");
                     break;
                 case 3:
+                {
                     System.out.println("Categoria");
                     CategoriaConsoleView vista = new CategoriaConsoleView();
                     CategoriaController control = new CategoriaController(vista);
                     control.iniciar();
                     break;
-                case 4:
+            }
+                case 4: {
                     EditorialConsoleView vista = new EditorialConsoleView();
                     EditorialController  control = new EditorialController(vista);
                     control.iniciar();
                     break;
+                }
                 case 5:
                     //instanciar la vista LIBROS
                     System.out.println("COMPRAS");
