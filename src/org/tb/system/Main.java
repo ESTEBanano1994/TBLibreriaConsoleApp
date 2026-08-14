@@ -31,7 +31,6 @@ public class Main extends Application {
 
         escenarioPrincipal.centerOnScreen();
         escenarioPrincipal.sizeToScene();
-
     }
 
     public static void main(String[] args) {
