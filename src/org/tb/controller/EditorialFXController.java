@@ -42,10 +42,9 @@ public class EditorialFXController implements Initializable {
  
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        
-        cargarTabla();
-        seleccionarFila();
-        configurarTabla();
+    configurarTabla();
+    cargarTabla();
+    seleccionarFila();
     }
     
     private void configurarTabla(){

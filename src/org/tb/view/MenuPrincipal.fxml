@@ -17,8 +17,8 @@
             <padding><Insets bottom="30" left="40" right="40" top="30" /></padding>
             <Button onAction="#handleClientes" prefHeight="40" prefWidth="220" style="-fx-background-color: #51201F;" text="Clientes" textFill="#eeeeee" />
             <Button onAction="#handleNoDisponible" prefHeight="40" prefWidth="220" style="-fx-background-color: #51201F;" text="Autores" textFill="WHITE" />
-            <Button onAction="#handleNoDisponible" prefHeight="40" prefWidth="220" style="-fx-background-color: #51201F;" text="Categorías" textFill="WHITE" />
-            <Button onAction="#handleNoDisponible" prefHeight="40" prefWidth="220" style="-fx-background-color: #51201F;" text="Editoriales" textFill="WHITE" />
+            <Button onAction="#handleCategorias" prefHeight="40" prefWidth="220" style="-fx-background-color: #51201F;" text="Categorías" textFill="WHITE" />
+            <Button onAction="#handleEditorial" prefHeight="40" prefWidth="220" style="-fx-background-color: #51201F;" text="Editoriales" textFill="WHITE" />
             <Button onAction="#handleSalir" prefHeight="40" prefWidth="220" style="-fx-background-color: #51201F;" text="Salir" textFill="#fffafa" />
         </VBox>
     </center>
