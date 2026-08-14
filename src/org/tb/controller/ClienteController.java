@@ -1,7 +1,7 @@
 package org.tb.controller;
 
 import org.tb.dao.ClienteDAO;
-import org.tb.dao.impl.ClienteDAOimpl;
+import org.tb.dao.impl.ClienteDAOImpl;
 import org.tb.model.Cliente;
 import org.tb.view.ClienteConsoleView;
 
@@ -11,7 +11,7 @@ public class ClienteController {
     private final ClienteConsoleView vista;
 
     public ClienteController(ClienteConsoleView vista) {
-        this.dao = new ClienteDAOimpl();
+        this.dao = new ClienteDAOImpl();
         this.vista = vista;
     }
 

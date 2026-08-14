@@ -1,4 +1,3 @@
-
 package org.tb.util;
 
 import java.sql.Connection;
@@ -45,8 +44,6 @@ public class Conexion {
     // Crear conexión
     public Connection conectar() throws SQLException {
 
-        return DriverManager.getConnection(URL,USER,PASSWORD);
+        return DriverManager.getConnection(URL, USER, PASSWORD);
     }
-
 }
-
